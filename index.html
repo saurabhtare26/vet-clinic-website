@@ -3,199 +3,567 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Paws & Care Veterinary Clinic – Compassionate care for your pets in Malad, Mumbai." />
+  <meta name="description" content="Paws & Care Veterinary Clinic – Compassionate, expert care for your pets in Malad West, Mumbai. Book an appointment today." />
   <meta name="theme-color" content="#1a7f64" />
-  <title>Paws &amp; Care Veterinary Clinic</title>
+  <title>Paws &amp; Care Veterinary Clinic | Malad West, Mumbai</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="design.css" />
-
-  <!-- Mailchimp styles -->
+  <!-- Mailchimp embed styles -->
   <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
+
+  <!-- Site Stylesheet -->
+  <link rel="stylesheet" href="design.css" />
 </head>
 <body>
 
-  <!-- =====================
-       HEADER / NAV
-  ===================== -->
-  <header class="site-header">
+  <!-- =====================================================
+       STICKY HEADER / NAV
+  ====================================================== -->
+  <header class="site-header" id="site-header">
     <nav class="nav container">
-      <a href="#" class="nav-logo">🐾 Paws &amp; Care</a>
-      <ul class="nav-links">
+      <a href="#home" class="nav-logo" aria-label="Paws &amp; Care home">
+        <span class="nav-logo-icon">🐾</span>
+        <span class="nav-logo-text">Paws <em>&amp;</em> Care</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
         <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#subscribe" class="nav-cta">Book Appointment</a></li>
+        <li>
+          <a href="tel:+919876543210" class="nav-cta btn btn-primary">
+            📞 Call Now
+          </a>
+        </li>
       </ul>
-      <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
     </nav>
   </header>
 
-  <!-- =====================
+
+  <!-- =====================================================
        HERO SECTION
-  ===================== -->
+       Full-width with Unsplash pet/vet background image,
+       gradient overlay, headline, CTAs, and Three.js canvas
+  ====================================================== -->
   <section class="hero" id="home">
-    <!-- Three.js animation canvas placeholder -->
+
+    <!-- Background image via CSS + overlay gradient -->
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <!-- Three.js animation canvas (mounted by animation.js) -->
     <div class="hero-canvas-wrap" id="hero-canvas" aria-hidden="true"></div>
 
+    <!-- Decorative floating shapes -->
+    <div class="hero-deco" aria-hidden="true">
+      <span class="deco-circle deco-circle--1"></span>
+      <span class="deco-circle deco-circle--2"></span>
+      <span class="deco-paw deco-paw--1">🐾</span>
+      <span class="deco-paw deco-paw--2">🐾</span>
+      <span class="deco-paw deco-paw--3">🐾</span>
+    </div>
+
+    <!-- Hero content -->
     <div class="hero-content container">
-      <span class="hero-badge">Trusted by 2,000+ pet families in Mumbai</span>
-      <h1 class="hero-title">Compassionate Care<br />for Your Pets</h1>
+      <div class="hero-badge-wrap">
+        <span class="hero-badge">⭐ Rated #1 Vet Clinic in Malad West</span>
+      </div>
+
+      <h1 class="hero-title">
+        Where Every Pet<br />
+        <em>Gets the Love</em><br />
+        They Deserve
+      </h1>
+
       <p class="hero-subtitle">
-        Expert veterinary services with a gentle touch — because your furry family deserves the very best.
+        Trusted by 3,000+ families in Mumbai. Expert veterinary care
+        with a warm, gentle touch — for dogs, cats, rabbits &amp; more.
       </p>
+
       <div class="hero-actions">
-        <a href="tel:+919876543210" class="btn btn-primary">📞 Call Now</a>
-        <a href="#services" class="btn btn-outline">Our Services</a>
+        <a href="#subscribe" class="btn btn-primary btn-lg">
+          📅 Book Appointment
+        </a>
+        <a href="tel:+919876543210" class="btn btn-glass btn-lg">
+          📞 +91 98765 43210
+        </a>
+      </div>
+
+      <!-- Trust bar -->
+      <div class="hero-trust">
+        <div class="trust-item">
+          <strong>3,000+</strong>
+          <span>Happy Pets</span>
+        </div>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <div class="trust-item">
+          <strong>12+</strong>
+          <span>Years of Care</span>
+        </div>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <div class="trust-item">
+          <strong>24/7</strong>
+          <span>Emergency</span>
+        </div>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <div class="trust-item">
+          <strong>4.9 ★</strong>
+          <span>Google Rating</span>
+        </div>
       </div>
     </div>
 
-    <!-- Decorative paw prints (CSS/SVG, no JS) -->
-    <div class="hero-deco" aria-hidden="true">
-      <span class="paw paw-1">🐾</span>
-      <span class="paw paw-2">🐾</span>
-      <span class="paw paw-3">🐾</span>
+    <!-- Scroll indicator -->
+    <div class="hero-scroll" aria-hidden="true">
+      <span class="scroll-dot"></span>
     </div>
   </section>
 
-  <!-- =====================
+
+  <!-- =====================================================
        SERVICES SECTION
-  ===================== -->
+       6 services in a responsive card grid
+  ====================================================== -->
   <section class="services section" id="services">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">What We Offer</span>
-        <h2 class="section-title">Our Services</h2>
-        <p class="section-sub">Complete healthcare solutions for dogs, cats, and small animals.</p>
+        <h2 class="section-title">Comprehensive Pet Care Services</h2>
+        <p class="section-sub">
+          From routine check-ups to complex surgeries — we've got your furry family covered.
+        </p>
       </div>
 
       <div class="services-grid">
 
         <!-- Vaccination -->
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true">💉</div>
+        <article class="service-card" data-animate="fade-up">
+          <div class="service-icon-wrap service-icon-wrap--teal">
+            <span class="service-icon">💉</span>
+          </div>
           <h3>Vaccination</h3>
-          <p>Core &amp; non-core vaccines to keep your pet protected against common diseases year-round.</p>
+          <p>Core and lifestyle vaccines administered by certified vets. We follow WHO-recommended schedules to keep your pet protected year-round.</p>
+          <a href="#contact" class="service-link">Learn more →</a>
         </article>
 
         <!-- Surgery -->
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true">🔬</div>
-          <h3>Surgery</h3>
-          <p>Routine to complex surgical procedures performed with precision by our experienced surgeons.</p>
+        <article class="service-card" data-animate="fade-up" style="--delay: 0.1s">
+          <div class="service-icon-wrap service-icon-wrap--blue">
+            <span class="service-icon">🔬</span>
+          </div>
+          <h3>Surgery &amp; Procedures</h3>
+          <p>From routine spaying and neutering to complex orthopedic surgery — performed with precision in our fully-equipped OT.</p>
+          <a href="#contact" class="service-link">Learn more →</a>
         </article>
 
         <!-- Grooming -->
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true">✂️</div>
-          <h3>Grooming</h3>
-          <p>Full-service grooming — baths, haircuts, nail trims, and ear cleaning for a happy, fresh pet.</p>
+        <article class="service-card" data-animate="fade-up" style="--delay: 0.2s">
+          <div class="service-icon-wrap service-icon-wrap--lavender">
+            <span class="service-icon">✂️</span>
+          </div>
+          <h3>Pet Grooming</h3>
+          <p>Full-service grooming — bath, breed-specific haircuts, nail trimming, ear cleaning, and de-shedding treatments.</p>
+          <a href="#contact" class="service-link">Learn more →</a>
         </article>
 
-        <!-- Emergency Care -->
-        <article class="service-card service-card--accent">
-          <div class="service-icon" aria-hidden="true">🚨</div>
-          <h3>Emergency Care</h3>
-          <p>24/7 emergency services for critical situations. Call us anytime — we're always here for you.</p>
-          <a href="tel:+919876543210" class="btn btn-sm">Emergency Line</a>
+        <!-- Emergency -->
+        <article class="service-card service-card--emergency" data-animate="fade-up" style="--delay: 0.3s">
+          <div class="service-icon-wrap service-icon-wrap--red">
+            <span class="service-icon">🚨</span>
+          </div>
+          <h3>24/7 Emergency Care</h3>
+          <p>Accidents don't wait. Our emergency team is available around the clock. Call us any time — we'll be ready for your pet.</p>
+          <a href="tel:+919876543210" class="service-link service-link--emergency">Call Emergency →</a>
+        </article>
+
+        <!-- Diagnostics -->
+        <article class="service-card" data-animate="fade-up" style="--delay: 0.4s">
+          <div class="service-icon-wrap service-icon-wrap--amber">
+            <span class="service-icon">🩺</span>
+          </div>
+          <h3>Diagnostics &amp; Lab</h3>
+          <p>In-house blood panels, X-ray, ultrasound, and urinalysis. Fast, accurate results to support better clinical decisions.</p>
+          <a href="#contact" class="service-link">Learn more →</a>
+        </article>
+
+        <!-- Dental -->
+        <article class="service-card" data-animate="fade-up" style="--delay: 0.5s">
+          <div class="service-icon-wrap service-icon-wrap--mint">
+            <span class="service-icon">🦷</span>
+          </div>
+          <h3>Dental Care</h3>
+          <p>Professional dental cleaning, polishing, and tooth extractions under safe anaesthesia to maintain your pet's oral health.</p>
+          <a href="#contact" class="service-link">Learn more →</a>
         </article>
 
       </div>
     </div>
   </section>
 
-  <!-- =====================
-       ABOUT SECTION
-  ===================== -->
+
+  <!-- =====================================================
+       WHY CHOOSE US SECTION
+       4 differentiators with icons and copy
+  ====================================================== -->
+  <section class="why-us section" id="why-us">
+    <div class="container">
+
+      <div class="why-us-inner">
+        <!-- Left: heading + CTA -->
+        <div class="why-us-text">
+          <span class="section-tag">Why Families Trust Us</span>
+          <h2 class="section-title">A Clinic Built Around<br /><em>Your Pet's Wellbeing</em></h2>
+          <p>We don't just treat animals — we build lasting relationships with every pet and their family. Here's what sets us apart.</p>
+          <a href="#subscribe" class="btn btn-primary" style="margin-top: 1.5rem; display: inline-flex;">
+            Book a Free Consultation
+          </a>
+        </div>
+
+        <!-- Right: feature list -->
+        <div class="why-us-features">
+
+          <div class="feature-item">
+            <div class="feature-icon-wrap">
+              <span>👨‍⚕️</span>
+            </div>
+            <div class="feature-body">
+              <h4>Experienced Doctors</h4>
+              <p>Our vets hold BVSc &amp; MVSc degrees with 10+ years of clinical experience across multiple specialities.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon-wrap">
+              <span>⚡</span>
+            </div>
+            <div class="feature-body">
+              <h4>Rapid Emergency Response</h4>
+              <p>Dedicated emergency bay, crash cart, and a standby team available every minute of every day.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon-wrap">
+              <span>🏥</span>
+            </div>
+            <div class="feature-body">
+              <h4>Modern Equipment</h4>
+              <p>Digital X-ray, ultrasound, in-house lab, and a fully sterile surgical suite — everything under one roof.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon-wrap">
+              <span>💚</span>
+            </div>
+            <div class="feature-body">
+              <h4>Transparent &amp; Affordable</h4>
+              <p>Clear, upfront pricing with no hidden charges. We accept major pet insurance policies and offer EMI options.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       GALLERY SECTION
+       Responsive pet photo grid using Unsplash images
+  ====================================================== -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Happy Patients</span>
+        <h2 class="section-title">Moments That Matter</h2>
+        <p class="section-sub">Every visit is a story of care, courage, and love.</p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <figure class="gallery-item gallery-item--tall">
+          <img
+            src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80&auto=format&fit=crop"
+            alt="Golden Labrador looking happy at the clinic"
+            loading="lazy"
+            width="600" height="800"
+          />
+          <figcaption>Bruno — Post-surgery recovery</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&q=80&auto=format&fit=crop"
+            alt="Fluffy orange cat resting"
+            loading="lazy"
+            width="600" height="400"
+          />
+          <figcaption>Mango — Annual wellness check</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=600&q=80&auto=format&fit=crop"
+            alt="Golden retriever puppy"
+            loading="lazy"
+            width="600" height="400"
+          />
+          <figcaption>Charlie — First vaccination</figcaption>
+        </figure>
+
+        <figure class="gallery-item gallery-item--wide">
+          <img
+            src="https://images.unsplash.com/photo-1548767797-d8c844163c4a?w=900&q=80&auto=format&fit=crop"
+            alt="Vet gently examining a cat"
+            loading="lazy"
+            width="900" height="400"
+          />
+          <figcaption>In the examination room</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w=600&q=80&auto=format&fit=crop"
+            alt="Puppy receiving care"
+            loading="lazy"
+            width="600" height="400"
+          />
+          <figcaption>Luna — Dental cleaning</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=600&q=80&auto=format&fit=crop"
+            alt="Cute dog portrait"
+            loading="lazy"
+            width="600" height="400"
+          />
+          <figcaption>Max — Grooming day!</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       TESTIMONIALS SECTION
+       3 patient reviews with star ratings
+  ====================================================== -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Patient Stories</span>
+        <h2 class="section-title">What Pet Parents Say</h2>
+        <p class="section-sub">Real stories from real families who trust Paws &amp; Care.</p>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <!-- Review 1 -->
+        <blockquote class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            ★★★★★
+          </div>
+          <p class="testimonial-text">
+            "Dr. Sharma saved my Labrador Bruno's life after he swallowed a toy. The emergency team was calm, swift, and incredibly professional. I can never thank them enough."
+          </p>
+          <footer class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">PS</div>
+            <div>
+              <cite class="author-name">Priya Sharma</cite>
+              <span class="author-detail">Bruno's Mom · Malad West</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <!-- Review 2 -->
+        <blockquote class="testimonial-card testimonial-card--featured">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            ★★★★★
+          </div>
+          <p class="testimonial-text">
+            "We've been bringing our two cats here for 6 years. The staff genuinely cares — they remember our pets by name and always make them feel comfortable. Simply the best clinic in Mumbai."
+          </p>
+          <footer class="testimonial-author">
+            <div class="author-avatar author-avatar--blue" aria-hidden="true">RV</div>
+            <div>
+              <cite class="author-name">Rahul Verma</cite>
+              <span class="author-detail">Mango &amp; Pickle's Dad · Kandivali</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <!-- Review 3 -->
+        <blockquote class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            ★★★★★
+          </div>
+          <p class="testimonial-text">
+            "Fantastic grooming service! My Golden Retriever Charlie came out looking like he was headed to a dog show. The groomer was so patient and gentle with him."
+          </p>
+          <footer class="testimonial-author">
+            <div class="author-avatar author-avatar--amber" aria-hidden="true">AM</div>
+            <div>
+              <cite class="author-name">Anjali Mehta</cite>
+              <span class="author-detail">Charlie's Mom · Borivali</span>
+            </div>
+          </footer>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       ABOUT DOCTOR / CLINIC SECTION
+  ====================================================== -->
   <section class="about section" id="about">
     <div class="container about-grid">
 
+      <!-- Doctor image -->
       <div class="about-image-wrap">
-        <!-- Placeholder illustration -->
-        <div class="about-img-placeholder" role="img" aria-label="Veterinarian with a dog">
-          <span class="about-img-emoji">🐕‍🦺</span>
+        <div class="about-img-frame">
+          <img
+            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80&auto=format&fit=crop"
+            alt="Dr. Meera Nair, Chief Veterinarian at Paws &amp; Care"
+            loading="lazy"
+            width="600" height="700"
+            class="about-photo"
+          />
+          <!-- Floating credential badge -->
+          <div class="about-badge" aria-label="BVSc MVSc certified">
+            <span class="about-badge-icon">🏆</span>
+            <div>
+              <strong>Dr. Meera Nair</strong>
+              <span>BVSc, MVSc (Surgery)</span>
+            </div>
+          </div>
         </div>
       </div>
 
+      <!-- About content -->
       <div class="about-content">
-        <span class="section-tag">Who We Are</span>
-        <h2 class="section-title">Your Pets' Health is Our Priority</h2>
+        <span class="section-tag">Meet the Team</span>
+        <h2 class="section-title">Led by Passion,<br /><em>Guided by Science</em></h2>
         <p>
-          Founded in 2012, Paws &amp; Care Veterinary Clinic has been serving the pet community in Malad, Mumbai
-          with warmth and clinical excellence. Our team of qualified vets and support staff treat every animal
-          as their own.
+          Founded in 2012, Paws &amp; Care was built on a simple belief: every animal deserves
+          the same standard of medical care as any human patient. Dr. Meera Nair and her team
+          of six veterinarians bring together over 60 years of combined experience.
         </p>
         <p>
-          We combine modern diagnostic equipment with a calm, welcoming environment so both you and your
-          pet feel comfortable from the moment you walk in.
+          Our clinic is equipped with a fully sterile operation theatre, an in-house diagnostic
+          laboratory, digital radiography, and a dedicated isolation ward for infectious cases —
+          all in a calm, pet-friendly environment designed to reduce stress and anxiety.
         </p>
+
+        <div class="about-credentials">
+          <div class="credential">
+            <span class="credential-num">6</span>
+            <span class="credential-label">Specialist Vets</span>
+          </div>
+          <div class="credential">
+            <span class="credential-num">12+</span>
+            <span class="credential-label">Years Open</span>
+          </div>
+          <div class="credential">
+            <span class="credential-num">3k+</span>
+            <span class="credential-label">Patients Treated</span>
+          </div>
+        </div>
+
         <ul class="about-list">
-          <li>✅ IAVM Certified Veterinarians</li>
-          <li>✅ In-house diagnostic lab</li>
-          <li>✅ Separate dog &amp; cat waiting areas</li>
-          <li>✅ Cashless pet insurance accepted</li>
+          <li>✅ IAVM (Indian Association of Veterinary Medicine) Certified</li>
+          <li>✅ ISO-compliant surgical theatre &amp; ICU</li>
+          <li>✅ Separate dog, cat &amp; exotic animal areas</li>
+          <li>✅ Cashless claims accepted (Star Health, Digit, HDFC Ergo)</li>
         </ul>
-        <a href="#contact" class="btn btn-primary">Visit the Clinic</a>
+
+        <a href="#contact" class="btn btn-primary" style="margin-top: 1.75rem; display: inline-flex;">
+          Meet Our Doctors
+        </a>
       </div>
 
     </div>
   </section>
 
-  <!-- =====================
+
+  <!-- =====================================================
        CONTACT SECTION
-  ===================== -->
+       Phone, address, hours + Google Maps iframe
+  ====================================================== -->
   <section class="contact section" id="contact">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Find Us</span>
-        <h2 class="section-title">Get in Touch</h2>
+        <h2 class="section-title">Visit Us in Malad West</h2>
+        <p class="section-sub">Conveniently located near Link Road, with parking available.</p>
       </div>
 
       <div class="contact-grid">
 
-        <!-- Contact details -->
+        <!-- Contact details column -->
         <div class="contact-details">
-          <div class="contact-item">
+
+          <div class="contact-card">
             <span class="contact-icon" aria-hidden="true">📞</span>
             <div>
-              <strong>Phone</strong>
-              <a href="tel:+919876543210">+91 98765 43210</a>
+              <strong>Phone &amp; WhatsApp</strong>
+              <a href="tel:+919876543210" class="contact-link">+91 98765 43210</a>
+              <a href="https://wa.me/919876543210" class="contact-link contact-link--wa" target="_blank" rel="noopener">
+                💬 Chat on WhatsApp
+              </a>
             </div>
           </div>
 
-          <div class="contact-item">
+          <div class="contact-card">
             <span class="contact-icon" aria-hidden="true">📍</span>
             <div>
               <strong>Address</strong>
               <address>
                 Paws &amp; Care Veterinary Clinic<br />
-                Link Road, Malad West<br />
-                Mumbai, Maharashtra 400064
+                Shop 4, Sunflower CHS, Link Road<br />
+                Malad West, Mumbai — 400064
               </address>
             </div>
           </div>
 
-          <div class="contact-item">
+          <div class="contact-card">
             <span class="contact-icon" aria-hidden="true">🕐</span>
             <div>
-              <strong>Hours</strong>
-              <p>Mon – Sat: 9 AM – 9 PM<br />Sun: 10 AM – 6 PM<br /><em>Emergency: 24/7</em></p>
+              <strong>Clinic Hours</strong>
+              <table class="hours-table">
+                <tr><td>Mon – Fri</td><td>9:00 AM – 9:00 PM</td></tr>
+                <tr><td>Saturday</td><td>9:00 AM – 8:00 PM</td></tr>
+                <tr><td>Sunday</td><td>10:00 AM – 6:00 PM</td></tr>
+                <tr class="hours-emg"><td>Emergency</td><td>24 / 7 Always Open</td></tr>
+              </table>
             </div>
           </div>
+
         </div>
 
-        <!-- Google Maps embed -->
-        <div class="contact-map">
+        <!-- Google Maps iframe -->
+        <div class="contact-map-wrap">
           <iframe
-            title="Paws &amp; Care Veterinary Clinic – Malad West, Mumbai"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.!2d72.8479!3d19.1868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63b1e000001%3A0x0!2sMalad+West%2C+Mumbai%2C+Maharashtra+400064!5e0!3m2!1sen!2sin!4v1700000000000"
+            title="Paws &amp; Care Veterinary Clinic location — Malad West Mumbai"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.088856!2d72.8479!3d19.1868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6fcb4d99b71%3A0x0!2sMalad+West%2C+Mumbai%2C+Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000"
             width="100%"
-            height="320"
+            height="100%"
             style="border:0;"
             allowfullscreen=""
             loading="lazy"
@@ -207,105 +575,204 @@
     </div>
   </section>
 
-  <!-- =====================
-       NEWSLETTER / MAILCHIMP SUBSCRIBE SECTION
-  ===================== -->
+
+  <!-- =====================================================
+       SUBSCRIBE / MAILCHIMP SECTION
+       Email newsletter + appointment booking form
+  ====================================================== -->
   <section class="subscribe section" id="subscribe">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Stay Connected</span>
-        <h2 class="section-title">Book an Appointment or Subscribe</h2>
-        <p class="section-sub">Get reminders, health tips, and clinic updates delivered to your inbox.</p>
-      </div>
+      <div class="subscribe-inner">
 
-      <!-- Mailchimp Embedded Form -->
-      <div class="mc-form-wrap">
-        <div id="mc_embed_signup">
-          <form
-            action="https://adbizit.us5.list-manage.com/subscribe/post?u=cb12fa6f2b93ab771a6356a8a&amp;id=ecfdc38e9d&amp;f_id=009555e0f0"
-            method="post"
-            id="mc-embedded-subscribe-form"
-            name="mc-embedded-subscribe-form"
-            class="validate"
-            target="_blank"
-            novalidate
-          >
-            <div id="mc_embed_signup_scroll">
-
-              <div class="mc-field-group">
-                <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
-                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required value="" placeholder="you@example.com" />
-              </div>
-
-              <div class="mc-field-group">
-                <label for="mce-FNAME">First Name <span class="asterisk">*</span></label>
-                <input type="text" name="FNAME" class="required text" id="mce-FNAME" value="" required placeholder="Riya" />
-              </div>
-
-              <div class="mc-field-group">
-                <label for="mce-LNAME">Last Name <span class="asterisk">*</span></label>
-                <input type="text" name="LNAME" class="required text" id="mce-LNAME" value="" placeholder="Sharma" />
-              </div>
-
-              <div class="mc-field-group">
-                <label for="mce-PHONE">Phone Number</label>
-                <input type="text" name="PHONE" class="REQ_CSS" id="mce-PHONE" value="" placeholder="+91 98765 43210" />
-              </div>
-
-              <!-- Bot protection honeypot field - DO NOT REMOVE -->
-              <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                <input type="text" name="b_cb12fa6f2b93ab771a6356a8a_ecfdc38e9d" tabindex="-1" value="" />
-              </div>
-
-              <div id="mce-responses" class="clear">
-                <div class="response" id="mce-error-response" style="display:none;"></div>
-                <div class="response" id="mce-success-response" style="display:none;"></div>
-              </div>
-
-              <div class="mc-submit-wrap">
-                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe &amp; Stay Updated" />
-              </div>
-
-            </div>
-          </form>
+        <div class="subscribe-text">
+          <span class="section-tag">Stay Connected</span>
+          <h2 class="section-title">Book an Appointment<br /><em>or Subscribe</em></h2>
+          <p>Get pet health tips, vaccine reminders, and clinic updates delivered to your inbox. No spam — only good stuff for pet parents.</p>
+          <ul class="subscribe-perks">
+            <li>🐾 Monthly pet health newsletter</li>
+            <li>💊 Vaccine &amp; deworming reminders</li>
+            <li>🎁 Exclusive member discounts</li>
+          </ul>
         </div>
-      </div>
-      <!-- /End Mailchimp Form -->
 
+        <!-- Mailchimp Embedded Form -->
+        <div class="mc-form-wrap">
+          <div id="mc_embed_signup">
+            <form
+              action="https://adbizit.us5.list-manage.com/subscribe/post?u=cb12fa6f2b93ab771a6356a8a&amp;id=ecfdc38e9d&amp;f_id=009555e0f0"
+              method="post"
+              id="mc-embedded-subscribe-form"
+              name="mc-embedded-subscribe-form"
+              class="validate"
+              target="_blank"
+              novalidate
+            >
+              <div id="mc_embed_signup_scroll">
+
+                <div class="mc-field-group">
+                  <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                  <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required value="" placeholder="you@example.com" />
+                </div>
+
+                <div class="mc-row">
+                  <div class="mc-field-group mc-field-group--half">
+                    <label for="mce-FNAME">First Name <span class="asterisk">*</span></label>
+                    <input type="text" name="FNAME" class="required text" id="mce-FNAME" required value="" placeholder="Priya" />
+                  </div>
+                  <div class="mc-field-group mc-field-group--half">
+                    <label for="mce-LNAME">Last Name</label>
+                    <input type="text" name="LNAME" class="text" id="mce-LNAME" value="" placeholder="Sharma" />
+                  </div>
+                </div>
+
+                <div class="mc-field-group">
+                  <label for="mce-PHONE">Phone (WhatsApp preferred)</label>
+                  <input type="text" name="PHONE" class="REQ_CSS" id="mce-PHONE" value="" placeholder="+91 98765 43210" />
+                </div>
+
+                <!-- Honeypot — do NOT remove -->
+                <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                  <input type="text" name="b_cb12fa6f2b93ab771a6356a8a_ecfdc38e9d" tabindex="-1" value="" />
+                </div>
+
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none;"></div>
+                  <div class="response" id="mce-success-response" style="display:none;"></div>
+                </div>
+
+                <div class="mc-submit-wrap">
+                  <input
+                    type="submit"
+                    name="subscribe"
+                    id="mc-embedded-subscribe"
+                    class="button"
+                    value="Subscribe &amp; Book Now"
+                  />
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- /End Mailchimp Form -->
+
+      </div>
     </div>
   </section>
 
-  <!-- =====================
+
+  <!-- =====================================================
        FOOTER
-  ===================== -->
+  ====================================================== -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p class="footer-logo">🐾 Paws &amp; Care Veterinary Clinic</p>
-      <p class="footer-addr">Link Road, Malad West, Mumbai – 400064 &nbsp;|&nbsp; +91 98765 43210</p>
-      <p class="footer-copy">&copy; 2025 Paws &amp; Care. All rights reserved.</p>
+
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo" aria-label="Paws &amp; Care home">
+          <span class="nav-logo-icon">🐾</span>
+          <span class="nav-logo-text">Paws <em>&amp;</em> Care</span>
+        </a>
+        <p>Compassionate veterinary care for every paw, claw, and tail in Mumbai since 2012.</p>
+      </div>
+
+      <div class="footer-links-col">
+        <strong>Quick Links</strong>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <strong>Services</strong>
+        <ul>
+          <li><a href="#services">Vaccination</a></li>
+          <li><a href="#services">Surgery</a></li>
+          <li><a href="#services">Grooming</a></li>
+          <li><a href="#services">Emergency Care</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact-col">
+        <strong>Contact</strong>
+        <p>Link Road, Malad West<br />Mumbai – 400064</p>
+        <a href="tel:+919876543210">+91 98765 43210</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom container">
+      <p>&copy; 2025 Paws &amp; Care Veterinary Clinic. All rights reserved.</p>
+      <p>Made with 🐾 in Mumbai</p>
     </div>
   </footer>
 
-  <!-- External JS (Three.js animation + interactions) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-  <script src="animation.js" defer></script>
 
-  <!-- jQuery (required by Mailchimp validation) -->
+  <!-- =====================================================
+       STICKY CTA — Floating WhatsApp + Call buttons
+  ====================================================== -->
+  <div class="sticky-cta" id="sticky-cta" aria-label="Quick contact options">
+
+    <a
+      href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20an%20appointment%20at%20Paws%20%26%20Care"
+      class="sticky-btn sticky-btn--wa"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+    >
+      <span class="sticky-btn-icon" aria-hidden="true">
+        <!-- WhatsApp SVG icon -->
+        <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+      </span>
+      <span class="sticky-btn-label">WhatsApp</span>
+    </a>
+
+    <a
+      href="tel:+919876543210"
+      class="sticky-btn sticky-btn--call"
+      aria-label="Call us now"
+    >
+      <span class="sticky-btn-icon" aria-hidden="true">
+        <!-- Phone SVG icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+        </svg>
+      </span>
+      <span class="sticky-btn-label">Call Now</span>
+    </a>
+
+  </div>
+
+
+  <!-- =====================================================
+       SCRIPTS
+  ====================================================== -->
+  <!-- jQuery (required by Mailchimp) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-  <!-- Mailchimp validation script -->
+  <!-- Mailchimp validation -->
   <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
   <script>
     (function($) {
       window.fnames = new Array();
       window.ftypes = new Array();
-      fnames[0] = 'EMAIL'; ftypes[0] = 'email';
-      fnames[1] = 'FNAME'; ftypes[1] = 'text';
-      fnames[2] = 'LNAME'; ftypes[2] = 'text';
-      fnames[4] = 'PHONE'; ftypes[4] = 'phone';
+      fnames[0]='EMAIL';  ftypes[0]='email';
+      fnames[1]='FNAME';  ftypes[1]='text';
+      fnames[2]='LNAME';  ftypes[2]='text';
+      fnames[4]='PHONE';  ftypes[4]='phone';
     }(jQuery));
     var $mcj = jQuery.noConflict(true);
   </script>
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+
+  <!-- Site JS (nav toggle + Three.js animation + scroll effects) -->
+  <script src="animation.js" defer></script>
 
 </body>
 </html>
